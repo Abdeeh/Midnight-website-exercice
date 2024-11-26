@@ -1,0 +1,618 @@
+/* Préconfig */
+
+/* open-sans-300 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/open-sans-v40-latin-300.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* open-sans-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/open-sans-v40-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* open-sans-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/open-sans-v40-latin-500.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* open-sans-600 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/open-sans-v40-latin-600.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* open-sans-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/open-sans-v40-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* open-sans-800 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/open-sans-v40-latin-800.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+:root {
+    --m-xxs: 8px;
+    --m-xs: 24px;
+    --m-s: 36px;
+    --m-m: 48px;
+    --m-l: 64px;
+    --m-xl: 96px;
+    --m-xxl: 144px;
+}
+
+h1 {
+    font-size: 4.8rem;
+    font-weight: normal;
+    margin-bottom: var(--m-s);
+}
+
+h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: var(--m-m);
+    position: relative;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #FF00EA, #2AC9FF);
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 3rem;
+    margin-bottom: var(--m-xs);
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: var(--m-xxs);
+}
+
+p {
+    font-size: 1.6rem;
+    margin-bottom: var(--m-xs);
+}
+
+section {
+    padding-block: var(--m-xl);
+}
+
+.global-container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.sr-only {
+    border: 0 !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    -webkit-clip-path: inset(50%) !important;
+    clip-path: inset(50%) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+    white-space: nowrap !important;
+}
+
+.styled-text,
+.tarif {
+    background: linear-gradient(to right, #FF00EA, #2AC9FF);
+    background-clip: text;
+    color: transparent;
+}
+
+.primary-cta {
+    background: linear-gradient(to right, #FF00EA, #2AC9FF);
+    color: #fff;
+    font-size: 1.6rem;
+    padding: .5em 1em;
+}
+
+.secondary-cta {
+    font-size: 1.6rem;
+    color: #fff;
+    position: relative;
+}
+
+.secondary-cta::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #FF00EA, #2AC9FF);
+}
+
+.mandatory-star {
+    color: #FF00EA;
+}
+
+
+/* Body */
+
+body {
+    font-family: 'Open Sans', serif;
+    font-size: 1.8rem;
+    color: #170217;
+}
+
+
+/* Header */
+
+header {
+    background-color: #170217;
+    padding-block: var(--m-s);
+}
+
+header .global-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header ul {
+    list-style-type: "";
+    display: flex;
+    gap: var(--m-m);
+}
+
+.sign-in {
+    color: #2AC9FF;
+}
+
+.sign-up {
+    color: #FF00EA;
+}
+
+
+/* ACCUEIL */
+
+/* Hero */
+
+.hero {
+    background-color: #170217;
+    color: #fff;
+    padding-block: initial;
+    padding-top: var(--m-xxl);
+}
+
+.hero .global-container {
+    display: flex;
+    gap: 36px;
+}
+
+.hero-img {
+    position: relative;
+    flex: 1;
+}
+
+.toggle-btn {
+    position: absolute;
+    background: none;
+    border: none;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.subhead {
+    margin-bottom: var(--m-s);
+}
+
+.hero .ctas {
+    display: flex;
+    align-items: center;
+}
+
+.hero .primary-cta {
+    margin-right: var(--m-s);
+}
+
+
+/* Section 2 */
+
+.section-2 ul {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--m-s);
+}
+
+.section-2 li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    /* position: relative; */
+    border: solid 1px;
+    border-image: linear-gradient(to right, #FF00EA, #2AC9FF) 1;
+    padding: var(--m-xs);
+    margin-bottom: var(--m-m);
+}
+
+.section-2 li p {
+    font-size: 2.6rem;
+    text-align: center;
+    margin-bottom: unset;
+}
+
+.section-2 .primary-cta {
+    margin-right: var(--m-s);
+}
+
+.section-2 .secondary-cta {
+    color: #170217;
+}
+
+
+/* Section 3 */
+
+.section-3 {
+    background: url(../img/img6.jpg) no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.section-3 .global-container>ul {
+    display: flex;
+    gap: var(--m-xs);
+    margin-bottom: var(--m-l);
+    margin-top: calc(var(--m-xs) + 3em);
+}
+
+.section-3 li:has(li) {
+    flex: 1;
+    background-color: #170217;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: var(--m-xs);
+}
+
+.section-3 li ul {
+    margin-bottom: var(--m-xs);
+}
+
+.section-3 li li {
+    text-align: initial;
+    padding: unset;
+}
+
+.tarif {
+    width: fit-content;
+    font-size: 4rem;
+    margin: auto;
+}
+
+.most-popular-tag {
+    position: absolute;
+    background-image: linear-gradient(to right, #FF00EA, #2AC9FF);
+    padding: .2em;
+    bottom: 100%;
+    right: 0;
+    left: 0;
+    margin: initial;
+}
+
+
+/* Section 4 */
+
+.section-4 .global-container {
+    display: flex;
+    gap: var(--m-xxl);
+}
+
+.section-4 .global-container > * {
+    flex: 1;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+}
+
+.send-form-btn {
+    align-self: flex-end;
+}
+
+.form-text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "noms mail"
+        "message message";
+    gap: var(--m-xs);
+}
+
+.noms {
+    grid-area: noms;
+}
+
+.mail {
+    grid-area: mail;
+}
+
+.message {
+    grid-area: message;
+}
+
+.message textarea {
+    min-height: 200px;
+}
+
+textarea,
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    border: solid 1px #FF00EA;
+    min-height: 3em;
+}
+
+.rgpd {
+    font-size: 1.3rem;
+    margin-bottom: var(--m-s);
+}
+
+.send-form-btn {
+    border: none;
+    background: linear-gradient(to right, #FF00EA, #2AC9FF);
+    color: #fff;
+    padding: .5em 1em;
+}
+
+label {
+    display: block;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #170217;
+    color: #fff;
+    position: relative;
+    padding-block: var(--m-l);
+}
+
+footer .global-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--m-s);
+}
+
+.go-up-btn {
+    position: absolute;
+    right: 32px;
+    bottom: 100%;
+    transform: translateY(50%);
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: var(--m-xs);
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: var(--m-l);
+}
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+
+/* PRESENTATION */
+
+strong {
+    font-weight: normal;
+    color: #FF00EA;
+}
+
+/* Section 5 */
+
+.section-5 {
+    background-color: #170217;
+    color: #fff;
+}
+
+.section-5 h1 {
+    margin-left: var(--m-xxl);
+    margin-bottom: unset;
+}
+
+
+/* Section 6 */
+
+.article {
+    display: flex;
+    gap: var(--m-l);
+    align-items: center;
+}
+
+.article-1 {
+    margin-bottom: var(--m-l);
+}
+
+
+/* Section 7 */
+
+.section-7 {
+    background-color: #170217;
+    color: #fff;
+}
+
+.section-7 ul {
+    display: flex;
+    gap: var(--m-s);
+}
+
+.section-7 ul li {
+    flex: 1;
+}
+
+.section-7 ul li img {
+    margin-bottom: var(--m-s);
+}
+
+
+/* MOBILE */
+
+@media screen and (max-width: 375px) {
+    .global-container {
+        max-width: 330px;
+    }
+
+    h1 {
+        font-size: 3.6rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    .hero .global-container {
+        flex-direction: column-reverse;
+        position: relative;
+    }
+
+    .section-2 ul {
+        flex-direction: column;
+    }
+
+    .toggle-btn {
+        bottom: 100%;
+    }
+
+    .hero .ctas {
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+    }
+
+    /* section 2 */
+
+    .section-2 div:has(a) {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+    }
+
+    /* section 3 */
+
+    .section-3 .global-container>ul {
+        flex-direction: column;
+    }
+
+    .section-3 .global-container>ul li:nth-child(3) {
+        margin-top: 2em;
+    }
+
+    /* section 4 */
+
+    .section-4 .global-container {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .form-text {
+        display: block;
+    }
+
+    .form-text > * {
+        margin-bottom: 32px;
+    }
+
+    /* footer */
+
+    .footer-socials {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+    }
+}
